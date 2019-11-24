@@ -1,0 +1,104 @@
+{
+  "name": "react-video",
+  "version": "0.1.0",
+  "description": "A react video player with a wrapper for Vimeo and local videos",
+  "author": "Harald T. Wirths <harald.wirths@4fb.de>",
+  "license": "MIT",
+  "private": true,
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "test": "jest",
+    "cover": "yarn test --coverage",
+    "codecov": "yarn cover && npx codecov",
+    "prepare": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "NODE_ENV=cjs babel src -d dist",
+    "build:esm": "NODE_ENV=esm babel src -o dist/index.esm.js",
+    "release": "npx semantic-release --debug"
+  },
+  "dependencies": {
+    "@emotion/styled": "^10.0.23",
+    "@styled-system/css": "^5.0.23",
+    "@styled-system/jsx": "^5.0.13",
+    "@styled-system/should-forward-prop": "^5.1.2",
+    "prop-types": "^15.7.2",
+    "styled-system": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/register": "^7.7.4",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "jest-emotion": "^10.0.17",
+    "lint-staged": "^9.4.3",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
+    "semantic-release": "^15.13.31"
+  },
+  "jest": {
+    "testMatch": [
+      "**/__test__/*.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "**/src/*.js"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "html"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wirths/react-video.git"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "release": {
+    "repositoryUrl": "https://github.com/wirths/react-video.git",
+    "branch": "master",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/github",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "*.js",
+            "CHANGELOG.md",
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  }
+}

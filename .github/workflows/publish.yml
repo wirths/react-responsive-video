@@ -1,0 +1,54 @@
+name: Node.js Package
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: yarn run format
+      - run: yarn run test
+      - run: yarn run cover
+      - run: yarn run release
+        env:
+          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+
+  publish-npm:
+    needs: build-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: yarn run prepare
+      - run: npm publish
+        env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  publish-gpr:
+    needs: build-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: '@wirths'
+      - run: yarn run prepare
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
