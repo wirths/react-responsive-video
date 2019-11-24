@@ -4,7 +4,6 @@
   "description": "A react video player with a wrapper for Vimeo and local videos",
   "author": "Harald T. Wirths <harald.wirths@4fb.de>",
   "license": "MIT",
-  "private": true,
   "source": "src/index.js",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
