@@ -9,7 +9,8 @@ on:
       - master
 
 jobs:
-  build-test:
+  build:
+    name: Build and Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -22,7 +23,7 @@ jobs:
       - run: yarn run cover
 
   release:
-    needs: build-test
+    needs: build
     name: Release
     runs-on: ubuntu-latest
     steps:
