@@ -39,7 +39,12 @@ const Wrapper = styled('div', {
       display: `none !important`,
     },
   },
-  compose(space, layout, color, flexbox)
+  compose(
+    space,
+    layout,
+    color,
+    flexbox
+  )
 )
 
 const Video = React.forwardRef(

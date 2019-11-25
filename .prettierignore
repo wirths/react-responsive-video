@@ -1,5 +1,6 @@
 .cache
+coverage
+dist
 package.json
 yarn-error.log
 yarn.lock
-dist
