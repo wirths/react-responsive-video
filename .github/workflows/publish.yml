@@ -21,26 +21,21 @@ jobs:
       - run: yarn run test
       - run: yarn run cover
 
-  publish:
+  release:
     needs: build-test
+    name: Release
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: 'https://registry.npmjs.org'
-      - run: yarn
-      - run: yarn run prepare
-      - run: yarn run release
-      - run: npm publish
+      - name: Install dependencies
+        run: yarn
+      - name: Release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npm publish
-        with:
-          registry-url: 'https://npm.pkg.github.com'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
