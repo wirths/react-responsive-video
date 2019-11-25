@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/wirths/react-responsive-video/compare/v1.1.0...v1.2.0) (2019-11-25)
+
+
+### Bug Fixes
+
+* add GH token to new step ([954e681](https://github.com/wirths/react-responsive-video/commit/954e6817ee6dc5cc6bfa9e8a66708932d8cb18d1))
+* move GH token to jobs ([97bc5ec](https://github.com/wirths/react-responsive-video/commit/97bc5ecb50ad12ab0b0893e1ed5f3f4000608f25))
+
+
+### Features
+
+* add one step publishing - basically chore :-) ([1eb0936](https://github.com/wirths/react-responsive-video/commit/1eb0936b551a56ee64adbe55f4b0f28491f19545))
+
 # [1.1.0](https://github.com/wirths/react-responsive-video/compare/v1.0.0...v1.1.0) (2019-11-25)
 
 
