@@ -39,9 +39,8 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - uses: actions/setup-node@v1
+      - run: npm publish
         with:
           registry-url: 'https://npm.pkg.github.com'
-      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
