@@ -1,5 +1,6 @@
 # Contribution Guidelines
-RreactVideo has a [Code of Conduct][].
+
+ReactResponsiveVideo has a [Code of Conduct][].
 Please review and help enforce this code of conduct to help us foster an open and inclusive project. We love an open and kind community.
 
 [code of conduct]: ./CODEOFCONDUCT.md
@@ -11,6 +12,7 @@ For quick bug fixes or PRs that address an open issue, feel free to open a PR.
 If you’d like to suggest a new feature or change to the API, please open an issue for discussion first.
 
 ## Pull Requests
+
 Please follow these steps to open a new PR:
 
 1. Fork and clone this repo
@@ -22,7 +24,8 @@ Please follow these steps to open a new PR:
 7. Wait for a review of your PR
 
 ## Architecture
-ReactVideo is a pretty simple component / library which serves a single purpose to allow responsive videos.
+
+ReactResponsiveVideo is a pretty simple component / library which serves a single purpose to allow responsive videos.
 It relies on the great [Styled System][], which provides responsive functionality and some additional styling options.
 
-[Styled System]: https://styled-system.com
+[styled system]: https://styled-system.com

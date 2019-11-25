@@ -1,5 +1,5 @@
 {
-  "name": "react-video",
+  "name": "react-responsive-video",
   "version": "0.1.0",
   "description": "A react video player with a wrapper for Vimeo and local videos",
   "author": "Harald T. Wirths <harald.wirths@4fb.de>",
@@ -70,7 +70,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wirths/react-video.git"
+    "url": "git+https://github.com/wirths/react-responsive-video.git"
   },
   "husky": {
     "hooks": {
@@ -84,7 +84,7 @@
     ]
   },
   "release": {
-    "repositoryUrl": "https://github.com/wirths/react-video.git",
+    "repositoryUrl": "https://github.com/wirths/react-responsive-video.git",
     "branch": "master",
     "plugins": [
       "@semantic-release/commit-analyzer",
