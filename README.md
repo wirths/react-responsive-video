@@ -22,7 +22,8 @@ yarn add react-responsive-video
 
 ```jsx
 import Video from 'react-responsive-video'
-;<Video mp4={`file.mp4`} />
+
+<Video mp4={`file.mp4`} />
 ```
 
 The component allows the props as follows:
