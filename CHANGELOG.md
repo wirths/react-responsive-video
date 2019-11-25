@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/wirths/react-responsive-video/compare/v1.2.2...v1.2.3) (2019-11-25)
+
+
+### Bug Fixes
+
+* move props into css part ([1b61f87](https://github.com/wirths/react-responsive-video/commit/1b61f87f07f5ccfd0c4a9c5af32b4ff3c409f15b))
+
 ## [1.2.2](https://github.com/wirths/react-responsive-video/compare/v1.2.1...v1.2.2) (2019-11-25)
 
 

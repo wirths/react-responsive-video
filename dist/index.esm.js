@@ -58,7 +58,7 @@ var Video = React.forwardRef(function (_ref, ref) {
     css: css({
       objectFit: objectFit
     })
-  }), (mp4 || ogg || webm || m3u8) && jsx("video", _extends({
+  }), (mp4 || ogg || webm || m3u8) && jsx("video", {
     mp4: mp4,
     ogg: ogg,
     webm: webm,
@@ -70,10 +70,10 @@ var Video = React.forwardRef(function (_ref, ref) {
     playsInline: true,
     poster: imageVideo,
     width: "100%",
-    css: css({
+    css: css(_extends({
       objectFit: objectFit
-    })
-  }, props), mp4 && jsx("source", {
+    }, props))
+  }, mp4 && jsx("source", {
     src: mp4,
     type: "video/mp4"
   }), ogg && jsx("source", {
@@ -85,15 +85,16 @@ var Video = React.forwardRef(function (_ref, ref) {
   }), m3u8 && jsx("source", {
     src: m3u8,
     type: "application/x-mpegURL"
-  })), vimeo && jsx("iframe", _extends({
+  })), vimeo && jsx("iframe", {
     margin: 0,
     src: vimeo + "?autoplay=1&loop=1&muted=1&autopause=0",
     width: "100%",
     height: "auto",
     frameBorder: "0",
     allow: "autoplay; fullscreen",
-    allowFullScreen: true
-  }, props))));
+    allowFullScreen: true,
+    css: css(_extends({}, props))
+  })));
 });
 Video.propTypes = propTypes;
 Video.defaultProps = defaultProps;

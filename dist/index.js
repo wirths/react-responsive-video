@@ -71,7 +71,7 @@ var Video = _react["default"].forwardRef(function (_ref, ref) {
     css: (0, _css["default"])({
       objectFit: objectFit
     })
-  }), (mp4 || ogg || webm || m3u8) && (0, _jsx.jsx)("video", _extends({
+  }), (mp4 || ogg || webm || m3u8) && (0, _jsx.jsx)("video", {
     mp4: mp4,
     ogg: ogg,
     webm: webm,
@@ -83,10 +83,10 @@ var Video = _react["default"].forwardRef(function (_ref, ref) {
     playsInline: true,
     poster: imageVideo,
     width: "100%",
-    css: (0, _css["default"])({
+    css: (0, _css["default"])(_extends({
       objectFit: objectFit
-    })
-  }, props), mp4 && (0, _jsx.jsx)("source", {
+    }, props))
+  }, mp4 && (0, _jsx.jsx)("source", {
     src: mp4,
     type: "video/mp4"
   }), ogg && (0, _jsx.jsx)("source", {
@@ -98,15 +98,16 @@ var Video = _react["default"].forwardRef(function (_ref, ref) {
   }), m3u8 && (0, _jsx.jsx)("source", {
     src: m3u8,
     type: "application/x-mpegURL"
-  })), vimeo && (0, _jsx.jsx)("iframe", _extends({
+  })), vimeo && (0, _jsx.jsx)("iframe", {
     margin: 0,
     src: vimeo + "?autoplay=1&loop=1&muted=1&autopause=0",
     width: "100%",
     height: "auto",
     frameBorder: "0",
     allow: "autoplay; fullscreen",
-    allowFullScreen: true
-  }, props))));
+    allowFullScreen: true,
+    css: (0, _css["default"])(_extends({}, props))
+  })));
 });
 
 Video.propTypes = propTypes;
