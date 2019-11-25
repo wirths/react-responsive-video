@@ -20,6 +20,7 @@ yarn add react-responsive-video
 
 ## Usage
 
+<!-- prettier-ignore -->
 ```jsx
 import Video from 'react-responsive-video'
 
@@ -39,16 +40,25 @@ The component allows the props as follows:
 The video could be resized with responsive values based on the breakpoints in [Styled System][].  
 Example:
 
+<!-- prettier-ignore -->
 ```jsx
-<Video ogg={`file.ogg`} height={[320, 400, 480, 560].map(n => n + 'px')} />
+<Video 
+  ogg={`file.ogg`} 
+  height={[320, 400, 480, 560].map(n => n + 'px')}
+/>
 ```
 
 ### Examples
 
 The following examples integrates a video in webm format, provides different heights for defined breakpoints and an object-fit to fill a give box.
 
+<!-- prettier-ignore -->
 ```jsx
-<Video webm={`file.webm`} height={[320, 400, 480, 560].map(n => n + 'px')} objectFit={`contain`} />
+<Video
+  webm={`file.webm`}
+  height={[320, 400, 480, 560].map(n => n + 'px')}
+  objectFit={`contain`}
+/>
 ```
 
 [styled system]: https://styled-system.com/responsive-styles
