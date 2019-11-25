@@ -1,3 +1,11 @@
+## [1.2.2](https://github.com/wirths/react-responsive-video/compare/v1.2.1...v1.2.2) (2019-11-25)
+
+
+### Bug Fixes
+
+* change assets for semantic-release ([7f6d16d](https://github.com/wirths/react-responsive-video/commit/7f6d16d5cf98aa4ccd32726f0c729891815d387a))
+* change assets for semantic-release 2 ([058500f](https://github.com/wirths/react-responsive-video/commit/058500f2fd71e5cd6ecae96676144d934b3ba792))
+
 ## [1.2.1](https://github.com/wirths/react-responsive-video/compare/v1.2.0...v1.2.1) (2019-11-25)
 
 
