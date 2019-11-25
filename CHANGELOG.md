@@ -1,3 +1,11 @@
+## [1.2.4](https://github.com/wirths/react-responsive-video/compare/v1.2.3...v1.2.4) (2019-11-25)
+
+
+### Bug Fixes
+
+* test actions with GH reg ([7e7c5b1](https://github.com/wirths/react-responsive-video/commit/7e7c5b1f52254166a485501a3fcebe26d705038d))
+* try new sem release job ([2af6f6f](https://github.com/wirths/react-responsive-video/commit/2af6f6f5806ce7c0cb67de9940c5660a3a572d21))
+
 ## [1.2.3](https://github.com/wirths/react-responsive-video/compare/v1.2.2...v1.2.3) (2019-11-25)
 
 
