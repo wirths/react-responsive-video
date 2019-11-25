@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-video",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "A react video player with a wrapper for Vimeo and local videos",
   "author": "Harald T. Wirths <harald.wirths@4fb.de>",
   "license": "MIT",
