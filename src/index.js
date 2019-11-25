@@ -39,12 +39,7 @@ const Wrapper = styled('div', {
       display: `none !important`,
     },
   },
-  compose(
-    space,
-    layout,
-    color,
-    flexbox
-  )
+  compose(space, layout, color, flexbox)
 )
 
 const Video = React.forwardRef(
@@ -88,7 +83,7 @@ const Video = React.forwardRef(
           {vimeo && (
             <iframe
               margin={0}
-              src={vimeo}
+              src={`${vimeo}?autoplay=1&loop=1&muted=1&autopause=0`}
               width="100%"
               height="auto"
               frameBorder="0"
