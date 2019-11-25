@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/wirths/react-responsive-video/compare/v1.2.0...v1.2.1) (2019-11-25)
+
+
+### Bug Fixes
+
+* play with tokens ([2b7d7ee](https://github.com/wirths/react-responsive-video/commit/2b7d7ee2510310b842dfe8d6e8710b52e3db7369))
+
 # [1.2.0](https://github.com/wirths/react-responsive-video/compare/v1.1.0...v1.2.0) (2019-11-25)
 
 
