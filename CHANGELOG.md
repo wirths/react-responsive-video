@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/wirths/react-responsive-video/compare/v1.2.4...v1.2.5) (2019-11-25)
+
+
+### Bug Fixes
+
+* add NPM sem release plugin ([531541e](https://github.com/wirths/react-responsive-video/commit/531541e2d8f4c0da87d2763366136ded36007be9))
+
 ## [1.2.4](https://github.com/wirths/react-responsive-video/compare/v1.2.3...v1.2.4) (2019-11-25)
 
 
