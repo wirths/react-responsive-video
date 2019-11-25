@@ -71,8 +71,8 @@ const Video = React.forwardRef(
               width="100%"
               css={css({
                 objectFit: objectFit,
+                ...props,
               })}
-              {...props}
             >
               {mp4 && <source src={mp4} type="video/mp4" />}
               {ogg && <source src={ogg} type="video/ogg" />}
@@ -89,7 +89,9 @@ const Video = React.forwardRef(
               frameBorder="0"
               allow="autoplay; fullscreen"
               allowFullScreen
-              {...props}
+              css={css({
+                ...props,
+              })}
             />
           )}
         </Wrapper>
