@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/wirths/react-responsive-video/compare/v1.2.5...v1.3.0) (2020-02-12)
+
+
+### Features
+
+* add video option for controls ([677c2c0](https://github.com/wirths/react-responsive-video/commit/677c2c05f197eae8ddd44646ea164a1052ec605b))
+
 ## [1.2.5](https://github.com/wirths/react-responsive-video/compare/v1.2.4...v1.2.5) (2019-11-25)
 
 
