@@ -42,15 +42,13 @@ var defaultProps = {
   vimeo: "",
   imageVideo: "",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
+  controls: false
 };
 var Wrapper = (0, _styled["default"])('div', {
   shouldForwardProp: _shouldForwardProp["default"]
 })({
-  display: "flex",
-  '::-webkit-media-controls': {
-    display: "none !important"
-  }
+  display: "flex"
 }, (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout, _styledSystem.color, _styledSystem.flexbox));
 
 var Video = _react["default"].forwardRef(function (_ref, ref) {
@@ -63,7 +61,8 @@ var Video = _react["default"].forwardRef(function (_ref, ref) {
       objectFit = _ref.objectFit,
       justifyContent = _ref.justifyContent,
       alignItems = _ref.alignItems,
-      props = _objectWithoutPropertiesLoose(_ref, ["mp4", "ogg", "webm", "m3u8", "vimeo", "imageVideo", "objectFit", "justifyContent", "alignItems"]);
+      controls = _ref.controls,
+      props = _objectWithoutPropertiesLoose(_ref, ["mp4", "ogg", "webm", "m3u8", "vimeo", "imageVideo", "objectFit", "justifyContent", "alignItems", "controls"]);
 
   return (0, _jsx.jsx)(_react["default"].Fragment, null, (mp4 || ogg || webm || m3u8 || vimeo) && (0, _jsx.jsx)(Wrapper, _extends({
     ref: ref
@@ -81,6 +80,7 @@ var Video = _react["default"].forwardRef(function (_ref, ref) {
     muted: true,
     loop: true,
     playsInline: true,
+    controls: true,
     poster: imageVideo,
     width: "100%",
     css: (0, _css["default"])(_extends({

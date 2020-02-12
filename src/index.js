@@ -28,6 +28,7 @@ const defaultProps = {
   imageVideo: ``,
   justifyContent: `center`,
   alignItems: `center`,
+  controls: false,
 }
 
 const Wrapper = styled('div', {
@@ -35,16 +36,25 @@ const Wrapper = styled('div', {
 })(
   {
     display: `flex`,
-    '::-webkit-media-controls': {
-      display: `none !important`,
-    },
   },
   compose(space, layout, color, flexbox)
 )
 
 const Video = React.forwardRef(
   (
-    { mp4, ogg, webm, m3u8, vimeo, imageVideo, objectFit, justifyContent, alignItems, ...props },
+    {
+      mp4,
+      ogg,
+      webm,
+      m3u8,
+      vimeo,
+      imageVideo,
+      objectFit,
+      justifyContent,
+      alignItems,
+      controls,
+      ...props
+    },
     ref
   ) => (
     <>
@@ -67,6 +77,7 @@ const Video = React.forwardRef(
               muted
               loop
               playsInline
+              controls
               poster={imageVideo}
               width="100%"
               css={css({
