@@ -77,7 +77,7 @@ const Video = React.forwardRef(
               muted
               loop
               playsInline
-              controls
+              controls={controls}
               poster={imageVideo}
               width="100%"
               css={css({
