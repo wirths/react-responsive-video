@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/wirths/react-responsive-video/compare/v1.3.0...v1.3.1) (2020-10-06)
+
+
+### Bug Fixes
+
+* add controls to property ([9b5fba0](https://github.com/wirths/react-responsive-video/commit/9b5fba03bc9cc3a70c7ccf0a6fbb6885b6757430))
+
 # [1.3.0](https://github.com/wirths/react-responsive-video/compare/v1.2.5...v1.3.0) (2020-02-12)
 
 

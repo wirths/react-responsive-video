@@ -32,7 +32,8 @@ var propTypes = {
   imageVideo: _propTypes["default"].string,
   objectFit: _propTypes["default"].string,
   justifyContent: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].array]),
-  alignItems: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].array])
+  alignItems: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].array]),
+  controls: _propTypes["default"].bool
 };
 var defaultProps = {
   mp4: "",
@@ -80,7 +81,7 @@ var Video = /*#__PURE__*/_react["default"].forwardRef(function (_ref, ref) {
     muted: true,
     loop: true,
     playsInline: true,
-    controls: true,
+    controls: controls,
     poster: imageVideo,
     width: "100%",
     css: (0, _css["default"])(_extends({

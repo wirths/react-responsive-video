@@ -2,14 +2,13 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+/** @jsx jsx */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { compose, space, layout, color, flexbox } from 'styled-system';
 import css from '@styled-system/css';
 import shouldForwardProp from '@styled-system/should-forward-prop';
-/** @jsx jsx */
-
 import { jsx } from '@styled-system/jsx';
 var propTypes = {
   mp4: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
@@ -20,7 +19,8 @@ var propTypes = {
   imageVideo: PropTypes.string,
   objectFit: PropTypes.string,
   justifyContent: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-  alignItems: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
+  alignItems: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  controls: PropTypes.bool
 };
 var defaultProps = {
   mp4: "",
@@ -67,7 +67,7 @@ var Video = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
     muted: true,
     loop: true,
     playsInline: true,
-    controls: true,
+    controls: controls,
     poster: imageVideo,
     width: "100%",
     css: css(_extends({
