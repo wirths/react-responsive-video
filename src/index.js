@@ -1,10 +1,10 @@
+/** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { compose, space, layout, color, flexbox } from 'styled-system'
 import css from '@styled-system/css'
 import shouldForwardProp from '@styled-system/should-forward-prop'
-/** @jsx jsx */
 import { jsx } from '@styled-system/jsx'
 
 const propTypes = {
@@ -17,6 +17,7 @@ const propTypes = {
   objectFit: PropTypes.string,
   justifyContent: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   alignItems: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  controls: PropTypes.bool,
 }
 
 const defaultProps = {
@@ -77,7 +78,7 @@ const Video = React.forwardRef(
               muted
               loop
               playsInline
-              controls
+              controls={controls}
               poster={imageVideo}
               width="100%"
               css={css({
