@@ -51,7 +51,7 @@ var Wrapper = (0, _styled["default"])('div', {
   display: "flex"
 }, (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout, _styledSystem.color, _styledSystem.flexbox));
 
-var Video = _react["default"].forwardRef(function (_ref, ref) {
+var Video = /*#__PURE__*/_react["default"].forwardRef(function (_ref, ref) {
   var mp4 = _ref.mp4,
       ogg = _ref.ogg,
       webm = _ref.webm,
